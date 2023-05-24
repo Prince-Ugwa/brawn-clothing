@@ -6,7 +6,7 @@ import {
 const SignIn = () => {
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopUp();
-    createUserDocFromUserAuth(user);
+    const userDocRef = await createUserDocFromUserAuth(user);
   };
   return (
     <div>
