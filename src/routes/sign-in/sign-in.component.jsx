@@ -18,9 +18,8 @@ const SignIn = () => {
       }
     }
     set();
-  }, []);
+  }, []); //when you run use effect the array sign means that the application can only run once when it mounts
 
-  //when you run use effect the array sign means that the application can only run once when it mounts
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopUp();
     const userDocRef = await createUserDocFromUserAuth(user);
